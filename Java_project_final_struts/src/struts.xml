@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>
+ <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+ <constant name="struts.mapper.action.prefix.enabled" value="true" />
+<package name="default" extends="struts-default">
+ 
+<action name="login" class="com.java.controller.LoginAction">
+<result name="success">/Senroll.jsp</result>
+<result name="error">/Slogin.jsp</result>
+<result name="input">/Slogin.jsp</result>
+</action>
+
+<action name="Register" class="com.java.controller.StudentAction" method="register">
+<result name="success">/SRegister.jsp</result>
+<result name="input">/SRegister.jsp</result>
+
+</action>
+
+<action name="register1" class="com.java.controller.StudentAction" method="register1">
+<result name="success">/Senroll.jsp</result>
+<result name="error">/SRegister.jsp</result>
+<result name="input">/SRegister.jsp</result>
+</action>
+<action name="enroll" class="com.java.controller.StudentAction" >
+<result name="enroll" >/Senroll.jsp</result>
+<result name="notselected" >/Senroll.jsp</result>
+<result name="drop" >/Senroll.jsp</result>
+<result name="input">/Senroll.jsp</result>
+</action>
+<action name="logout" class="com.java.controller.StudentAction" method="logout">
+<result name="success">/Slogin.jsp</result>
+<result name="input">/Senroll.jsp</result>
+
+</action>
+</package>
+</struts>   
